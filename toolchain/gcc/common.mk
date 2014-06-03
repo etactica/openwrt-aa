@@ -106,6 +106,7 @@ endif
 
 GCC_CONFIGURE:= \
 	SHELL="$(BASH)" \
+	MAKEINFO=missing \
 	$(HOST_SOURCE_DIR)/configure \
 		--prefix=$(TOOLCHAIN_DIR) \
 		--build=$(GNU_HOST_NAME) \
