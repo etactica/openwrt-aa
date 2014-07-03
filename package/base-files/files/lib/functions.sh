@@ -270,6 +270,7 @@ uci_apply_defaults() {
 	[ -z "$files" ] && return 0
 	mkdir -p /tmp/.uci
 	for file in $files; do
+                echo "Processing uci-defaults/$file ..." > /dev/kmsg
 		( . "./$(basename $file)" ) && rm -f "$file"
 	done
 	uci commit
